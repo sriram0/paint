@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Paint App</title>
+        <style>
+            #c{
+                border: 3px ridge yellow;
+            }
+            ul{
+                background-color: black;
+                color: white;
+                margin-top: -20px;
+                margin-left: -50px;
+            }
+            ul li{
+                background-color: black;
+                float: left;
+                width:max-content;
+                padding: 10px;
+            }
+            #li2{
+                padding-right: 76%;
+                padding-bottom: 18px;
+            }
+            #dr{
+                background-color: cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Color: <input id="colorI" type="color" value="#ff0000"></li>
+            <li id="li2">
+                Draw with 
+                <select id="dr" type="select" onchange="needToDraw = false;">
+                    <option value="brush">Brush</option>
+                    <option value="rect">Rectangle</option>
+                    <option value="fillRect">Filled Rectangle</option>
+                    <option value="circ">Ellipse</option>
+                    <option value="fillCirc">Filled Ellipse</option>
+                </select>
+            </li>
+        </ul><br><br>
+        <center>
+            <h1>Paint App</h1>
+            <canvas width="800px" height="400px" id="c"></canvas>
+        </center>
+    </body>
+    <script src="main.js"></script>
+</html>
